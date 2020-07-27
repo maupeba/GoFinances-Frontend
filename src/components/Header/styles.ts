@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  selected: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -17,6 +18,9 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
 
     nav {
+      display: flex;
+      flex-direction: row;
+
       a {
         color: #fff;
         text-decoration: none;
@@ -28,7 +32,7 @@ export const Container = styled.div<ContainerProps>`
         }
 
         &:hover {
-          opacity: 0.6;
+          opacity: 0.4;
         }
       }
     }
